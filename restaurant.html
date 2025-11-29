@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Gourmet Kitchen - Dvein Innovation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .veg-icon {
+            border: 1.5px solid #4CAF50;
+            padding: 2px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .veg-icon-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #4CAF50;
+            border-radius: 9999px;
+        }
+        .non-veg-icon {
+            border: 1.5px solid #D32F2F;
+            padding: 2px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .non-veg-icon-triangle {
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 9px solid #D32F2F;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#f26c0d",
+              "background-light": "#f8f7f5",
+              "background-dark": "#221710",
+              "content-light": "#ffffff",
+              "content-dark": "#2a1e16",
+              "text-light-primary": "#181411",
+              "text-dark-primary": "#f8f7f5",
+              "text-light-secondary": "#8a7260",
+              "text-dark-secondary": "#a19184",
+              "border-light": "#e6dfdb",
+              "border-dark": "#3f3025"
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "1.5rem", "xl": "2rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-text-light-primary dark:text-text-dark-primary">
+<div class="relative flex min-h-screen w-full flex-col">
+<header class="sticky top-0 z-40 flex items-center justify-center border-b border-border-light dark:border-border-dark bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="flex w-full max-w-7xl items-center justify-between whitespace-nowrap px-4 py-3">
+<div class="flex items-center gap-8">
+<a class="flex items-center gap-3 text-lg font-bold" href="#">
+<span class="material-symbols-outlined text-primary text-2xl">ramen_dining</span>
+                        Dvein Delights
+                    </a>
+</div>
+<div class="hidden md:flex flex-1 justify-center gap-8">
+<label class="flex flex-col w-full max-w-md">
+<div class="flex h-10 w-full flex-1 items-stretch rounded-full">
+<div class="flex items-center justify-center rounded-l-full border border-r-0 border-border-light bg-content-light pl-4 dark:border-border-dark dark:bg-content-dark">
+<span class="material-symbols-outlined text-text-light-secondary dark:text-text-dark-secondary">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-full border border-l-0 border-border-light bg-content-light px-4 text-sm placeholder:text-text-light-secondary focus:outline-0 focus:ring-0 dark:border-border-dark dark:bg-content-dark dark:placeholder:text-text-dark-secondary" placeholder="Search for restaurants or dishes" value=""/>
+</div>
+</label>
+</div>
+<div class="flex flex-1 justify-end gap-4">
+<a class="hidden cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full px-4 py-2 text-sm font-medium hover:bg-black/5 dark:hover:bg-white/5 md:flex" href="#">Offers</a>
+<a class="hidden cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full px-4 py-2 text-sm font-medium hover:bg-black/5 dark:hover:bg-white/5 md:flex" href="#">Sign In</a>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 w-10 bg-black/5 text-text-light-primary dark:bg-white/5 dark:text-text-dark-primary">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+<div class="size-10 rounded-full bg-cover bg-center bg-no-repeat" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAgAtpnQ3JkIhK94vcl1CY0suhedbnvAusbhn23P_3mzcPnkCNrY730TEFwwTM7RFnS6ZWEk-oaT83GQ08FWXXXlu7Gd2NqLHM3V0zC4O5oHw-7bwU2IgKnIPYjEYO05qBVPMjdgVKYWptOoklQJGirEHtMa-ln12yvV3hOsuW18pRcsny_wcbnNhN61R5yrbFT6jDc6E0aJtTs3jioe5oKiGUAqdlDV1VlmOmtmjswy9ef6va0OSu9fYk-NNcdN_Ge-o-D3IM9Q0E");'></div>
+</div>
+</div>
+</header>
+<main class="w-full mx-auto max-w-7xl px-4 py-8">
+<div class="w-full bg-center bg-no-repeat bg-cover flex flex-col justify-end overflow-hidden rounded-xl min-h-[320px]" data-alt="Assortment of gourmet dishes on a table" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA7-Nl0iriWcPV2BvQOmtbyPRA2af0iL9r1JP0Fkylg-yyeITLhCzR5uQZRFKVj1yYeNYgTzPSB8fbt0J8ks85P29M9vH1E0_h2Q4FRELnteIIos9LF56ajBeZLUIDtWhMGsKUOxmZPDqPb1kodu92_53NMJmbqsV0tIUqbueGiSiSJdZ83G5HFK6he-Io2BOMIRhGpraNsIEL844dEwwjp1AeWealp0CGFNy2-OoJlulfjfVJ5qbsK8y1CFcM3aJCVQ-2eIbLmURM");'></div>
+<div class="flex flex-wrap items-start justify-between gap-4 pt-6 pb-4">
+<div class="flex min-w-72 flex-col gap-2">
+<p class="text-4xl font-black tracking-tighter">The Gourmet Kitchen</p>
+<p class="text-base text-text-light-secondary dark:text-text-dark-secondary">Italian, Continental, North Indian</p>
+</div>
+<div class="flex items-center gap-2 rounded-lg bg-content-light p-2 shadow-sm dark:bg-content-dark">
+<div class="flex items-center gap-1 rounded-md bg-green-600 px-2 py-1 text-white">
+<span class="material-symbols-outlined !text-base" style="font-variation-settings: 'FILL' 1">star</span>
+<p class="text-sm font-bold">4.5</p>
+</div>
+<p class="border-l border-border-light pl-2 text-sm text-text-light-secondary dark:border-border-dark dark:text-text-dark-secondary">125 Reviews</p>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+<aside class="lg:sticky top-24 h-max lg:col-span-1 flex flex-col gap-6">
+<div class="rounded-lg border border-border-light bg-content-light p-4 dark:border-border-dark dark:bg-content-dark">
+<h3 class="mb-4 text-lg font-bold">Menu</h3>
+<nav class="flex flex-col gap-1">
+<a class="rounded-md bg-primary/10 px-3 py-2 text-sm font-semibold text-primary" href="#recommended">Recommended</a>
+<a class="rounded-md px-3 py-2 text-sm font-medium text-text-light-secondary hover:bg-black/5 dark:text-text-dark-secondary dark:hover:bg-white/5" href="#appetizers">Appetizers</a>
+<a class="rounded-md px-3 py-2 text-sm font-medium text-text-light-secondary hover:bg-black/5 dark:text-text-dark-secondary dark:hover:bg-white/5" href="#main-course">Main Course</a>
+<a class="rounded-md px-3 py-2 text-sm font-medium text-text-light-secondary hover:bg-black/5 dark:text-text-dark-secondary dark:hover:bg-white/5" href="#desserts">Desserts</a>
+<a class="rounded-md px-3 py-2 text-sm font-medium text-text-light-secondary hover:bg-black/5 dark:text-text-dark-secondary dark:hover:bg-white/5" href="#beverages">Beverages</a>
+</nav>
+</div>
+<div class="rounded-lg border border-border-light bg-content-light p-4 dark:border-border-dark dark:bg-content-dark">
+<div class="grid grid-cols-2 gap-x-2 gap-y-4">
+<div class="flex flex-col gap-1">
+<p class="text-sm text-text-light-secondary dark:text-text-dark-secondary">Delivery Time</p>
+<p class="text-sm font-medium">25-30 Mins</p>
+</div>
+<div class="flex flex-col gap-1">
+<p class="text-sm text-text-light-secondary dark:text-text-dark-secondary">Delivery Cost</p>
+<p class="text-sm font-medium">₹150</p>
+</div>
+<div class="flex flex-col gap-1 col-span-2">
+<p class="text-sm text-text-light-secondary dark:text-text-dark-secondary">Location</p>
+<p class="text-sm font-medium">123 Culinary Lane, Foodie City</p>
+</div>
+<div class="flex flex-col gap-1 col-span-2">
+<p class="text-sm text-text-light-secondary dark:text-text-dark-secondary">Hours</p>
+<p class="text-sm font-medium">11:00 AM - 10:00 PM</p>
+</div>
+</div>
+</div>
+</aside>
+<div class="lg:col-span-2 flex flex-col gap-10">
+<section class="scroll-mt-24" id="recommended">
+<div class="flex items-center justify-between pb-4">
+<h2 class="text-2xl font-bold">Recommended (5)</h2>
+</div>
+<div class="flex flex-col gap-6">
+<div class="flex items-start justify-between gap-4 border-b border-border-light pb-6 dark:border-border-dark">
+<div class="flex flex-col gap-2">
+<div class="veg-icon"><div class="veg-icon-dot"></div></div>
+<h4 class="font-bold">Bruschetta al Pomodoro</h4>
+<p class="text-sm text-text-light-secondary dark:text-text-dark-secondary">Grilled bread topped with fresh tomatoes, garlic, basil, and olive oil.</p>
+<p class="text-sm font-semibold">$8.99</p>
+</div>
+<div class="flex flex-col items-end gap-2 text-center">
+<div class="relative h-28 w-32 shrink-0">
+<div class="h-full w-full rounded-lg bg-cover bg-center" data-alt="Fresh bruschetta on a plate" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCbfnYs5M80mHu_4MBTkOw35cf-JkFoKJhV0bAP-uJ8HtWk35DSRLYtTk2E9a7uDc7exS-6bxERIP7VIp2P-a8ErIPBNQHINmOD8QvZIOkJxy7TEoGioOR-_54D-mfo5gDJTJQhnwFolU1f5rMzjPFnZxpJKCCw5BmrcN2o1Fd2eTWbQX7kcSrPta86sfhQTtyKd4BqvjOpZ0ikx38tMjiL4KkV3-mb_tAaCCaHmeKOV7nL0-W0PTbWFGTdUKWr-yAv_7eIMXJgBdI')"></div>
+<button class="absolute -bottom-2 left-1/2 w-24 -translate-x-1/2 transform cursor-pointer rounded-lg border border-primary/50 bg-primary/10 px-4 py-2 text-sm font-bold text-primary shadow-lg hover:bg-primary/20">ADD</button>
+</div>
+</div>
+</div>
+<div class="flex items-start justify-between gap-4 border-b border-border-light pb-6 dark:border-border-dark">
+<div class="flex flex-col gap-2">
+<div class="non-veg-icon"><div class="non-veg-icon-triangle"></div></div>
+<h4 class="font-bold">Classic Pepperoni Pizza</h4>
+<p class="text-sm text-text-light-secondary dark:text-text-dark-secondary">Thin crust pizza with rich tomato sauce, mozzarella, and pepperoni slices.</p>
+<p class="text-sm font-semibold">₹249</p>
+</div>
+<div class="flex flex-col items-end gap-2 text-center">
+<div class="relative h-28 w-32 shrink-0">
+<div class="absolute -top-1 -right-2 z-10 rounded-full bg-amber-400 px-2 py-0.5 text-xs font-bold text-black">Bestseller</div>
+<div class="h-full w-full rounded-lg bg-cover bg-center" data-alt="Pepperoni pizza slice" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDME_QnZmit23FBAgpQgf8SkJDGYjBB-ra1xNtBU2izA5bA_eSVghg3UmYcNrYhDLqY6Qu6vy51ClwtdZpuJr_npM4l-KA77N5nUzdDcqG3L7RzXVSf-7yR_VLVDNybR2Rzt9awUqPf7PgfkLVhkyCRL2zAemu6W0D_uWWpLAvkWXjCJYJpvGaOEfTPnQPQ1W82MoZ9gZ9zCKYp0iVhFW4GGeYfpdE-B7-ZeRv5dVDwvFUI3UqHeI-_uHTSjsBZiXK_cktsSlEiRI8')"></div>
+<div class="absolute -bottom-2 left-1/2 flex w-24 -translate-x-1/2 transform items-center justify-between rounded-lg border border-primary bg-primary text-sm font-bold text-white shadow-lg">
+<button class="px-2 py-2 hover:bg-black/10 rounded-l-lg">-</button>
+<span class="flex-grow text-center">1</span>
+<button class="px-2 py-2 hover:bg-black/10 rounded-r-lg">+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="reviews">
+<h2 class="text-2xl font-bold mb-4">Ratings & Reviews</h2>
+<div class="rounded-lg border border-border-light bg-content-light p-6 dark:border-border-dark dark:bg-content-dark">
+<div class="flex flex-col sm:flex-row flex-wrap gap-x-8 gap-y-6 pb-6 border-b border-border-light dark:border-border-dark">
+<div class="flex flex-col gap-2">
+<p class="text-4xl font-black tracking-tighter">4.5</p>
+<div class="flex gap-0.5 text-text-light-primary dark:text-text-dark-primary">
+<span class="material-symbols-outlined !text-lg" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-lg" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-lg" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-lg" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-lg">star_half</span>
+</div>
+<p class="text-base">125 reviews</p>
+</div>
+<div class="grid min-w-[200px] max-w-[400px] flex-1 grid-cols-[20px_1fr_40px] items-center gap-y-3">
+<p class="text-sm">5</p>
+<div class="flex h-2 flex-1 overflow-hidden rounded-full bg-black/10 dark:bg-white/10"><div class="rounded-full bg-primary" style="width: 50%;"></div></div>
+<p class="text-right text-sm text-text-light-secondary dark:text-text-dark-secondary">50%</p>
+<p class="text-sm">4</p>
+<div class="flex h-2 flex-1 overflow-hidden rounded-full bg-black/10 dark:bg-white/10"><div class="rounded-full bg-primary" style="width: 35%;"></div></div>
+<p class="text-right text-sm text-text-light-secondary dark:text-text-dark-secondary">35%</p>
+<p class="text-sm">3</p>
+<div class="flex h-2 flex-1 overflow-hidden rounded-full bg-black/10 dark:bg-white/10"><div class="rounded-full bg-primary" style="width: 10%;"></div></div>
+<p class="text-right text-sm text-text-light-secondary dark:text-text-dark-secondary">10%</p>
+<p class="text-sm">2</p>
+<div class="flex h-2 flex-1 overflow-hidden rounded-full bg-black/10 dark:bg-white/10"><div class="rounded-full bg-primary" style="width: 3%;"></div></div>
+<p class="text-right text-sm text-text-light-secondary dark:text-text-dark-secondary">3%</p>
+<p class="text-sm">1</p>
+<div class="flex h-2 flex-1 overflow-hidden rounded-full bg-black/10 dark:bg-white/10"><div class="rounded-full bg-primary" style="width: 2%;"></div></div>
+<p class="text-right text-sm text-text-light-secondary dark:text-text-dark-secondary">2%</p>
+</div>
+</div>
+<div class="pt-6 flex flex-col gap-6">
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-3">
+<img class="h-10 w-10 rounded-full object-cover" data-alt="Reviewer avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARdTNlRIhbOiUuZEq10rcrknB85Uwbmiflbx10oNPpkHbhcBPfdfkcN_sjJsqvvC78XV9_Bp2mvdc2mwzd-QZxGZ2nSnGC2-SQjAouqlMmKTiNcBr3meOHlLH3qGLnSDjkphj5ah3oYrvpCW2Y_RV-0erd-M2hv5HA8aCSO6pOYcjkk5mRoakLvzkwoyvAc9Xtwc9JMEBnafCKarSpPFQbPqokEGXn-spHU5HSIutJPhHkwS7b5Jq59sOlWLoTaDHZAMMt514DrA8"/>
+<div>
+<p class="font-semibold">Sarah L.</p>
+<p class="text-xs text-text-light-secondary dark:text-text-dark-secondary">2 days ago</p>
+</div>
+</div>
+<div class="flex items-center gap-0.5 text-amber-500">
+<span class="material-symbols-outlined !text-base" style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined !text-base" style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined !text-base" style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined !text-base" style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined !text-base" style="font-variation-settings: 'FILL' 1">star</span>
+</div>
+<p class="text-sm">Absolutely delicious! The pepperoni pizza was one of the best I've had. Fast delivery too. Highly recommend!</p>
+</div>
+<div class="flex flex-col gap-3 border-t border-border-light pt-6 dark:border-border-dark">
+<div class="flex items-center gap-3">
+<img class="h-10 w-10 rounded-full object-cover" data-alt="Reviewer avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASlKGPalBL64kfiNTGSRXxl903RrTH2PB3kL97lekgCI2Ywr21E8EbiNKyldqU1m7Dif9swcuq0bK7dda48R2q5wxgmbzttSPik_gsutmlxOm_ccpFglMFVRivZ6KNAEh8s3K96zKVybO_I-h5XCY6_TlJP0cC44gAKgLhCBH8ZRBh4lPao5pOoJR7cwvP6k0SULwtyOldwmkxG8vLcvbHrBcUKX7vmwk9kI2xQuPAfqd6nsTnJNBP5KdTfl9H8A2aryYioy2Pl0w"/>
+<div>
+<p class="font-semibold">Mike R.</p>
+<p class="text-xs text-text-light-secondary dark:text-text-dark-secondary">1 week ago</p>
+</div>
+</div>
+<div class="flex items-center gap-0.5 text-amber-500">
+<span class="material-symbols-outlined !text-base" style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined !text-base" style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined !text-base" style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined !text-base" style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined !text-base">star</span>
+</div>
+<p class="text-sm">Good food, but the bruschetta was a bit soggy by the time it arrived. Everything else was great.</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</main>
+<div class="hidden lg:block fixed right-8 bottom-24 h-max w-72">
+<div class="rounded-lg border border-border-light bg-content-light p-4 shadow-xl dark:border-border-dark dark:bg-content-dark">
+<h3 class="text-lg font-bold mb-4">Your Cart</h3>
+<div class="flex flex-col gap-4">
+<div class="flex justify-between items-center text-sm">
+<div class="flex items-center gap-2">
+<div class="veg-icon !p-0.5"><div class="!w-1.5 !h-1.5 veg-icon-dot"></div></div>
+<p>1 x Pepper...</p>
+</div>
+<p>₹260</p>
+</div>
+</div>
+<div class="border-t border-border-light my-4 dark:border-border-dark"></div>
+<div class="flex justify-between font-semibold">
+<p>Subtotal</p>
+<p>₹260</p>
+</div>
+<button class="mt-4 w-full cursor-pointer rounded-lg bg-primary py-2.5 text-sm font-bold text-white hover:bg-primary/90"> Proceed to Checkout </button><onclick><a href="checkout.html"></a></onclick>
+</div>
+</div>
+<button class="fixed bottom-6 right-6 flex h-14 w-14 cursor-pointer items-center justify-center rounded-full bg-primary shadow-lg hover:bg-primary/90">
+<span class="material-symbols-outlined text-white !text-3xl">smart_toy</span>
+</button>
+</div>
+</body></html>

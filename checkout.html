@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dvein Innovation - Checkout</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+      }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#f26c0d",
+              "background-light": "#f8f7f5",
+              "background-dark": "#221710",
+              "success": "#28A745",
+              "error": "#DC3545",
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-[#181411] dark:text-gray-200">
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-b border-[#f5f2f0] dark:border-gray-800">
+<div class="container mx-auto px-4">
+<div class="flex items-center justify-between whitespace-nowrap py-3">
+<div class="flex items-center gap-4 text-[#181411] dark:text-white">
+<div class="size-6">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M6 6H42L36 24L42 42H6L12 24L6 6Z"></path></svg>
+</div>
+<h2 class="text-[#181411] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Dvein Innovation</h2>
+</div>
+<div class="hidden md:flex items-center gap-9">
+<a class="text-[#181411] dark:text-gray-300 dark:hover:text-white text-sm font-medium leading-normal" href="#">Home</a>
+<a class="text-[#181411] dark:text-gray-300 dark:hover:text-white text-sm font-medium leading-normal" href="#">Offers</a>
+<a class="text-[#181411] dark:text-gray-300 dark:hover:text-white text-sm font-medium leading-normal" href="#">Restaurants</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] gap-2">
+<span class="material-symbols-outlined text-base">shopping_cart</span>
+<span class="truncate">Cart (3)</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuASHxZ9cc6446ZsnaHrZ8AehtOABGI17BCZTg2c92VcEHbKVHBNgr4uXyX9USzatM4Nfq0UEC6Ax9bilpbEfM7OtfWOG6KLWwBLY3QJlELA_IKIRAMM99p5YVptP0LkQS7c5hd4sZ1jKxr0LovBGkK8We_h2Vt1Xp2axc2d_ci1H4fIfqs8dWqr1v1xBp5HSm1ni-aVh_tV4ObSfS3tYqbJTxRcQOiUyrBhz3d1ki282ka8UB882pgkhLuJas-1aDK3cyUNl_bPeas");'></div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow container mx-auto px-4 py-8 md:py-12">
+<div class="mb-8">
+<div class="flex flex-wrap gap-2 mb-4">
+<a class="text-[#8a7260] dark:text-gray-400 text-sm font-medium leading-normal" href="#">Cart</a>
+<span class="text-[#8a7260] dark:text-gray-500 text-sm font-medium leading-normal">/</span>
+<span class="text-[#181411] dark:text-white text-sm font-medium leading-normal">Checkout</span>
+</div>
+<div class="flex flex-wrap justify-between gap-3">
+<p class="text-[#181411] dark:text-white text-4xl font-black leading-tight tracking-[-0.033em] min-w-72">Checkout</p>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12">
+<div class="lg:col-span-2 space-y-6">
+<div class="bg-white dark:bg-gray-800/50 rounded-lg p-6 shadow-sm">
+<h2 class="text-[#181411] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] pb-4 border-b border-[#f5f2f0] dark:border-gray-700">Your Order Summary</h2>
+<div class="divide-y divide-[#f5f2f0] dark:divide-gray-700">
+<div class="flex gap-4 py-4 justify-between">
+<div class="flex items-start gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px]" data-alt="Spicy Chicken Burger" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAlOaE932UBWSOs3KpUNh8C5ZoHmZmUqL8tPNbafklCmW4L8jIdyIooe5jyW965LzVE5lMrRp6ZFaIOh84kaBPotxRk2ll9whbFzftEhW9dkTEfA26Fnm6V6qeGwUh3TDfqkPQ7FvSW20mx_DtdM6drROYC3ZzOSSI_ZlOaBpNUH1a35csCRaKPQpA5ytPL8NYVnosu5eGAshzSSGmqkf4IkTBhf_67hYg34teIPu8LtJN5DgOFbYJKSKLM9ARsU9EFObodwKOIcCo");'></div>
+<div class="flex flex-1 flex-col justify-center">
+<p class="text-[#181411] dark:text-white text-base font-medium leading-normal">Spicy Chicken Burger</p>
+<p class="text-[#8a7260] dark:text-gray-400 text-sm font-normal leading-normal">₹250.00</p>
+<p class="text-[#8a7260] dark:text-gray-400 text-sm font-normal leading-normal">Extra cheese, no pickles</p>
+</div>
+</div>
+<div class="shrink-0">
+<div class="flex items-center gap-2 text-[#181411] dark:text-white">
+<button class="text-base font-medium leading-normal flex h-7 w-7 items-center justify-center rounded-full bg-[#f5f2f0] dark:bg-gray-700 cursor-pointer">-</button>
+<span class="text-base font-medium leading-normal w-4 text-center">1</span>
+<button class="text-base font-medium leading-normal flex h-7 w-7 items-center justify-center rounded-full bg-[#f5f2f0] dark:bg-gray-700 cursor-pointer">+</button>
+</div>
+</div>
+</div>
+<div class="flex gap-4 py-4 justify-between">
+<div class="flex items-start gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px]" data-alt="Classic Margherita Pizza" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAbA3d0E8s95MqSXdYKZ0IN0Wee1vaDnj6CcukBzJvJ8faYB5AirFDOPkFltTZR9b_Baby-qC9OAW3at2V1NwRtzqiNWHmfpCy5yUC_SbTxtKD6CTvym-r7cSjpGZAAYI38csjE4ADVmmbBD7rSguSMWVyCNRZW-8r33zdKXGxgq33EXdyIfcVEONnepkTgo-NNa8R4PZvgmt2TEsFdeyU2xv9NS05m22W46hwN506kUDAWETbN-E3NUN1l2iKTRMKd5TA00w8_f-4");'></div>
+<div class="flex flex-1 flex-col justify-center">
+<p class="text-[#181411] dark:text-white text-base font-medium leading-normal">Margherita Pizza</p>
+<p class="text-[#8a7260] dark:text-gray-400 text-sm font-normal leading-normal">₹350.00</p>
+</div>
+</div>
+<div class="shrink-0">
+<div class="flex items-center gap-2 text-[#181411] dark:text-white">
+<button class="text-base font-medium leading-normal flex h-7 w-7 items-center justify-center rounded-full bg-[#f5f2f0] dark:bg-gray-700 cursor-pointer">-</button>
+<span class="text-base font-medium leading-normal w-4 text-center">1</span>
+<button class="text-base font-medium leading-normal flex h-7 w-7 items-center justify-center rounded-full bg-[#f5f2f0] dark:bg-gray-700 cursor-pointer">+</button>
+</div>
+</div>
+</div>
+<div class="flex gap-4 py-4 justify-between">
+<div class="flex items-start gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px]" data-alt="Chocolate Milkshake" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD67Fsd9npnTNp-smhHlRbBn8pn2H9VOTXEavnKAHvysQzjfHIwGk6VsP4Pr58qGA-MeptrNMU-S3AOtwSEkWadatpN7EJBZ5p9PQzn7AUCEmBsH32Hj09xSWZ8Xwtknz92skPXRw8_0hgEDexPJ8xmGXR4KckYnxCIAllT8Y3EiGp7OPEzhB-NSj3h-Qx54PvfS39aDNQUreXohEmeC_PiEB-06Mn9jSGQGxbxURh_2ld6aFnYTTbw-g5ECrXdPyd6dZcF9P4Z5a0");'></div>
+<div class="flex flex-1 flex-col justify-center">
+<p class="text-[#181411] dark:text-white text-base font-medium leading-normal">Chocolate Milkshake</p>
+<p class="text-[#8a7260] dark:text-gray-400 text-sm font-normal leading-normal">₹150.00</p>
+</div>
+</div>
+<div class="shrink-0">
+<div class="flex items-center gap-2 text-[#181411] dark:text-white">
+<button class="text-base font-medium leading-normal flex h-7 w-7 items-center justify-center rounded-full bg-[#f5f2f0] dark:bg-gray-700 cursor-pointer">-</button>
+<span class="text-base font-medium leading-normal w-4 text-center">1</span>
+<button class="text-base font-medium leading-normal flex h-7 w-7 items-center justify-center rounded-full bg-[#f5f2f0] dark:bg-gray-700 cursor-pointer">+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-800/50 rounded-lg p-6 shadow-sm">
+<h3 class="text-[#181411] dark:text-white text-lg font-bold mb-4">Promo Code</h3>
+<div class="flex gap-2">
+<input class="flex-grow rounded-full border-[#f5f2f0] dark:border-gray-700 dark:bg-gray-800 focus:ring-primary focus:border-primary text-sm" placeholder="Enter coupon code" type="text"/>
+<button class="min-w-[84px] cursor-pointer rounded-full h-10 px-6 bg-primary/20 text-primary text-sm font-bold leading-normal tracking-[0.015em]">Apply</button>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-800/50 rounded-lg p-6 shadow-sm space-y-3">
+<h3 class="text-[#181411] dark:text-white text-lg font-bold mb-2">Bill Details</h3>
+<div class="flex justify-between text-sm text-[#8a7260] dark:text-gray-400"><span>Item Total</span><span>₹750.00</span></div>
+<div class="flex justify-between text-sm text-[#8a7260] dark:text-gray-400"><span>Delivery Fee</span><span>₹50.00</span></div>
+<div class="flex justify-between text-sm text-[#8a7260] dark:text-gray-400"><span>Taxes & Charges</span><span>₹37.50</span></div>
+<div class="flex justify-between text-sm text-success"><span>Discount</span><span>-₹100.00</span></div>
+<div class="border-t border-dashed border-[#f5f2f0] dark:border-gray-700 my-3"></div>
+<div class="flex justify-between text-lg font-bold text-[#181411] dark:text-white"><span>Grand Total</span><span>₹737.50</span></div>
+</div>
+</div>
+<div class="lg:col-span-3 space-y-8">
+<div class="bg-white dark:bg-gray-800/50 rounded-lg p-6 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h2 class="text-[#181411] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em]">Delivery Address</h2>
+<p class="text-sm text-[#8a7260] dark:text-gray-400 mt-1">Home - 25 mins</p>
+<p class="text-base text-[#181411] dark:text-gray-300 mt-2">123, Sunshine Apartments, Willow Creek, Bangalore - 560001</p>
+</div>
+<button class="cursor-pointer rounded-full h-10 px-6 bg-primary/20 text-primary text-sm font-bold leading-normal tracking-[0.015em]">Change</button>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-800/50 rounded-lg p-6 shadow-sm">
+<h2 class="text-[#181411] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] mb-5">Payment Options</h2>
+<div class="space-y-4">
+<label class="flex items-center p-4 border border-[#f5f2f0] dark:border-gray-700 rounded-lg has-[:checked]:border-primary has-[:checked]:ring-2 has-[:checked]:ring-primary/30">
+<input checked="" class="h-4 w-4 text-primary focus:ring-primary border-gray-300" name="payment_option" type="radio"/>
+<span class="ml-3 font-medium text-[#181411] dark:text-gray-300">Credit/Debit Card</span>
+</label>
+<label class="flex items-center p-4 border border-[#f5f2f0] dark:border-gray-700 rounded-lg has-[:checked]:border-primary has-[:checked]:ring-2 has-[:checked]:ring-primary/30">
+<input class="h-4 w-4 text-primary focus:ring-primary border-gray-300" name="payment_option" type="radio"/>
+<span class="ml-3 font-medium text-[#181411] dark:text-gray-300">UPI</span>
+</label>
+<label class="flex items-center p-4 border border-[#f5f2f0] dark:border-gray-700 rounded-lg has-[:checked]:border-primary has-[:checked]:ring-2 has-[:checked]:ring-primary/30">
+<input class="h-4 w-4 text-primary focus:ring-primary border-gray-300" name="payment_option" type="radio"/>
+<span class="ml-3 font-medium text-[#181411] dark:text-gray-300">Net Banking</span>
+</label>
+<label class="flex items-center p-4 border border-[#f5f2f0] dark:border-gray-700 rounded-lg has-[:checked]:border-primary has-[:checked]:ring-2 has-[:checked]:ring-primary/30">
+<input class="h-4 w-4 text-primary focus:ring-primary border-gray-300" name="payment_option" type="radio"/>
+<span class="ml-3 font-medium text-[#181411] dark:text-gray-300">Pay on Delivery</span>
+</label>
+</div>
+<div class="mt-6 text-center text-[#8a7260] dark:text-gray-500 text-xs flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">lock</span>
+<span>Your payment is safe and secure.</span>
+</div>
+</div>
+<button class="w-full flex cursor-pointer items-center justify-center overflow-hidden rounded-full h-14 px-6 bg-primary text-white text-lg font-bold leading-normal tracking-[0.015em] shadow-lg shadow-primary/30 hover:shadow-xl hover:shadow-primary/40 transition-shadow">
+<span class="truncate">Proceed to Pay ₹737.50</span>
+</button>
+</div>
+</div>
+</main>
+<div class="fixed bottom-8 right-8 z-50">
+<button class="bg-primary text-white rounded-full p-4 shadow-lg hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined !text-3xl">chat</span>
+</button>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DVein Delights</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin:0;
+            padding:0;
+            background:#d2652f;
+        }
+
+        header{
+            background:#d84709;
+            color:rgb(222, 206, 202);
+            padding:20px;
+            text-align:center;
+            font-size:28px;
+            font-weight:bold;
+            border-style: solid;
+            border-width: 1px 0;
+            border-color: #b34709;
+        }
+
+        .menu-container{
+            padding:30px;
+            display:grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+            gap:25px;
+        }
+
+        .item{
+            background:white;
+            border-radius:12px;
+            box-shadow:0 4px 12px rgba(0,0,0,0.15);
+            overflow:hidden;
+            transition:0.3s;
+        }
+
+        .item:hover{
+            transform:scale(1.05);
+        }
+
+        .item img{
+            width:100%;
+            height:170px;
+            object-fit:cover;
+        }
+
+        .info{
+            padding:15px;
+        }
+
+        .name{
+            font-size:20px;
+            font-weight:bold;
+        }
+
+        .badge{
+            display:inline-block;
+            padding:3px 10px;
+            font-size:12px;
+            border-radius:6px;
+            color:white;
+            margin-left:8px;
+        }
+
+        .veg{ background:#0f9d58; }
+        .nonveg{ background:#b00020; }
+
+        .price{
+            margin-top:5px;
+            font-size:18px;
+            color:#d60000;
+        }
+
+        .btn{
+            margin-top:10px;
+            background:#eb7412;
+            color:white;
+            padding:10px 15px;
+            border:none;
+            width:100%;
+            border-radius:8px;
+            font-size:16px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .btn:hover{
+            background:hsl(17, 98%, 48%);
+        }
+
+        .cart{
+            position:fixed;
+            bottom:20px;
+            right:20px;
+            background:#f45c2d;
+            padding:12px 20px;
+            color:white;
+            border-radius:40px;
+            font-size:18px;
+            font-weight:bold;
+            box-shadow:0 4px 12px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+
+<header>DVein Delights</header>
+
+<div class="menu-container">
+
+    <!-- VEG ITEMS -->
+    <div class="item">
+        <img src=".\food\paneerbuttermasal.jpg">
+        <div class="info">
+            <div class="name">Paneer Butter Masala <span class="badge veg">VEG</span></div>
+            <div class="price">₹180</div>
+            <button class="btn" onclick="addToCart('Paneer Butter Masala',180)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="item">
+        <img src=".\food\vegburger.jpg">
+        <div class="info">
+            <div class="name">Veg Burger <span class="badge veg">VEG</span></div>
+            <div class="price">₹99</div>
+            <button class="btn" onclick="addToCart('Veg Burger',99)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="item">
+        <img src=".\food\dosa.jpg">
+        <div class="info">
+            <div class="name">Masala Dosa <span class="badge veg">VEG</span></div>
+            <div class="price">₹89</div>
+            <button class="btn" onclick="addToCart('Masala Dosa',89)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="item">
+        <img src=".\food\pasta.avif">
+        <div class="info">
+            <div class="name">Creamy Pasta <span class="badge veg">VEG</span></div>
+            <div class="price">₹159</div>
+            <button class="btn" onclick="addToCart('Creamy Pasta',159)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="item">
+        <img src=".\food\Samosaa.jpg">
+        <div class="info">
+            <div class="name">Samosa (2 pcs) <span class="badge veg">VEG</span></div>
+            <div class="price">₹45</div>
+            <button class="btn" onclick="addToCart('Samosa',45)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="item">
+        <img src=".\food\poori.webp">
+        <div class="info">
+            <div class="name">Poori Masala <span class="badge veg">VEG</span></div>
+            <div class="price">₹75</div>
+            <button class="btn" onclick="addToCart('Poori Masala',75)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="item">
+        <img src=".\food\idly.jpg">
+        <div class="info">
+            <div class="name">Idly (2 pcs) <span class="badge veg">VEG</span></div>
+            <div class="price">₹40</div>
+            <button class="btn" onclick="addToCart('Idly',40)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="item">
+        <img src=".\food\vegfriedrice.webp">
+        <div class="info">
+            <div class="name">Veg Fried Rice <span class="badge veg">VEG</span></div>
+            <div class="price">₹120</div>
+            <button class="btn" onclick="addToCart('Veg Fried Rice',120)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="item">
+        <img src=".\food\cakes.avif">
+        <div class="info">
+            <div class="name">Chocolate Cake Slice <span class="badge veg">VEG</span></div>
+            <div class="price">₹129</div>
+            <button class="btn" onclick="addToCart('Chocolate Cake Slice',129)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="item">
+        <img src=".\food\panner.avif">
+        <div class="info">
+            <div class="name">Paneer Tikka <span class="badge veg">VEG</span></div>
+            <div class="price">₹160</div>
+            <button class="btn" onclick="addToCart('Paneer Tikka',160)">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- NON-VEG ITEMS -->
+    <div class="item">
+        <img src=".\food\chickenbriyani.jpg">
+        <div class="info">
+            <div class="name">Chicken Biryani <span class="badge nonveg">NON-VEG</span></div>
+            <div class="price">₹199</div>
+            <button class="btn" onclick="addToCart('Chicken Biryani',199)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="item">
+        <img src=".\food\pizza.jpg">
+        <div class="info">
+            <div class="name">Chicken Pizza <span class="badge nonveg">NON-VEG</span></div>
+            <div class="price">₹299</div>
+            <button class="btn" onclick="addToCart('Chicken Pizza',299)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="item">
+        <img src=".\food\chickenfry.jpg">
+        <div class="info">
+            <div class="name">Chicken Fry <span class="badge nonveg">NON-VEG</span></div>
+            <div class="price">₹160</div>
+            <button class="btn" onclick="addToCart('Chicken Fry',160)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="item">
+        <img src=".\food\muttoncurry.jpg">
+        <div class="info">
+            <div class="name">Mutton Curry <span class="badge nonveg">NON-VEG</span></div>
+            <div class="price">₹250</div>
+            <button class="btn" onclick="addToCart('Mutton Curry',250)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="item">
+        <img src=".\food\fish.avif">
+        <div class="info">
+            <div class="name">Fish Curry <span class="badge nonveg">NON-VEG</span></div>
+            <div class="price">₹180</div>
+            <button class="btn" onclick="addToCart('Fish Curry',180)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="item">
+        <img src=".\food\egg.jpg">
+        <div class="info">
+            <div class="name">Egg Curry <span class="badge nonveg">NON-VEG</span></div>
+            <div class="price">₹90</div>
+            <button class="btn" onclick="addToCart('Egg Curry',90)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="item">
+        <img src=".\food\roll.avif">
+        <div class="info">
+            <div class="name">Chicken Roll <span class="badge nonveg">NON-VEG</span></div>
+            <div class="price">₹110</div>
+            <button class="btn" onclick="addToCart('Chicken Roll',110)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="item">
+        <img src=".\food\fishfry.jpg">
+        <div class="info">
+            <div class="name">Fish Fry <span class="badge nonveg">NON-VEG</span></div>
+            <div class="price">₹150</div>
+            <button class="btn" onclick="addToCart('Fish Fry',150)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="item">
+        <img src=".\food\shawarma.jpg">
+        <div class="info">
+            <div class="name">Chicken Shawarma <span class="badge nonveg">NON-VEG</span></div>
+            <div class="price">₹130</div>
+            <button class="btn" onclick="addToCart('Chicken Shawarma',130)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="item">
+        <img src=".\food\prawnfry.jpg">
+        <div class="info">
+            <div class="name">Prawns Fry <span class="badge nonveg">NON-VEG</span></div>
+            <div class="price">₹220</div>
+            <button class="btn" onclick="addToCart('Prawns Fry',220)">Add to Cart</button>
+        </div>
+    </div>
+
+</div>
+
+<a href="checkout.html"><div class="cart" id="cartBtn">Cart: ₹0</div></a>
+
+<script>
+
+    let total = 0;
+    function addToCart(name, price){
+        total += price;
+        document.getElementById("cartBtn").innerHTML = `Cart: ₹${total}`;
+        alert(name + " added to cart!");
+    }
+    
+</script>
+
+</body>
+</html>
